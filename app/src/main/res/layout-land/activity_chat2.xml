@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatActivity2"
+    android:background="@color/chat_background"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/message_list"
+                android:layout_width="match_parent"
+                android:layout_height="472dp"
+                android:layout_above="@+id/myLinearLayout">
+
+
+            </android.support.v7.widget.RecyclerView>
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/my_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_below="@+id/myLinearLayout"
+        >
+
+        <EditText
+            android:id="@+id/input_message_text"
+            android:layout_width="488dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:ems="10"
+            android:hint="Type Something.."
+            android:inputType="textPersonName"
+            android:paddingLeft="20dp" />
+
+        <ImageButton
+            android:id="@+id/send_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            app:srcCompat="@drawable/ic_plane" />
+
+    </LinearLayout>
+
+</RelativeLayout>
